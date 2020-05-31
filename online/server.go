@@ -62,8 +62,6 @@ func getDedibackup(serverID int) (Dedibackup, error) {
 
 	err = json.Unmarshal(body, &dedibackup)
 	if err != nil {
-		fmt.Println(body)
-		fmt.Println(err)
 		return dedibackup, fmt.Errorf("Unable to unmarshal the JSON for the Dedibackup of the server %s", strconv.Itoa(serverID))
 	}
 

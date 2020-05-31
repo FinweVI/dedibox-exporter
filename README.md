@@ -27,5 +27,5 @@ Require `ONLINE_API_TOKEN` to be set with your Online.net's token.
 
 
 ## Issues & Contribution
-All bug report, packaging requests, features requests or PR are accepted.
+All bug report, packaging requests, features requests or PR are accepted.  
 I mainly created this exporter for my personal usage but I'll be happy to hear about your needs.

@@ -17,6 +17,7 @@ https://console.online.net/fr/api/
 ## Arguments
 
 | Name | Default | Description |
+| -------- | -------- | -------- |
 | listen-address | :9539 | Address to listen on for web interface and telemetry. |
 | metric-path | /metrics | Path under which to expose metrics. |
 

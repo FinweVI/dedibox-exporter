@@ -20,8 +20,8 @@ type Dedibackup struct {
 	Active         bool   `json:"active"`
 	ACLEnabled     bool   `json:"acl_enabled"`
 	Autologin      bool   `json:"autologin"`
-	QuotaSpace     int    `json:"quota_space"`
-	QuotaSpaceUsed int    `json:"quota_space_used"`
+	QuotaSpace     int64  `json:"quota_space"`
+	QuotaSpaceUsed int64  `json:"quota_space_used"`
 	QuotaFiles     int    `json:"quota_files"`
 	QuotaFilesUsed int    `json:"quota_files_used"`
 }
@@ -62,6 +62,8 @@ func getDedibackup(serverID int) (Dedibackup, error) {
 
 	err = json.Unmarshal(body, &dedibackup)
 	if err != nil {
+		fmt.Println(body)
+		fmt.Println(err)
 		return dedibackup, fmt.Errorf("Unable to unmarshal the JSON for the Dedibackup of the server %s", strconv.Itoa(serverID))
 	}
 

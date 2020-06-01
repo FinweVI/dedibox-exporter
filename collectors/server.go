@@ -2,15 +2,17 @@ package collectors
 
 import (
 	"fmt"
+	"strconv"
+	"strings"
+
 	"github.com/FinweVI/dedibox-exporter/online"
 	"github.com/prometheus/client_golang/prometheus"
-	"strconv"
 )
 
 type serverCollector struct {
-	dedibackupQuotaSpaceMetric *prometheus.Desc
+	dedibackupQuotaSpaceMetric     *prometheus.Desc
 	dedibackupQuotaSpaceUsedMetric *prometheus.Desc
-	dedibackupQuotaFilesMetric *prometheus.Desc
+	dedibackupQuotaFilesMetric     *prometheus.Desc
 	dedibackupQuotaFilesUsedMetric *prometheus.Desc
 }
 
@@ -59,7 +61,9 @@ func (collector *serverCollector) Collect(ch chan<- prometheus.Metric) {
 
 	for _, ddbkp := range dedibackups {
 		var dedibackupLabels []string
-		dedibackupLabels = append(dedibackupLabels, ddbkp.Login)
+		splt := strings.Split(ddbkp.Login, "-")
+		sid := splt[len(splt)-1]
+		dedibackupLabels = append(dedibackupLabels, sid)
 		dedibackupLabels = append(dedibackupLabels, strconv.FormatBool(ddbkp.Active))
 
 		ch <- prometheus.MustNewConstMetric(collector.dedibackupQuotaSpaceMetric, prometheus.GaugeValue, float64(ddbkp.QuotaSpace), dedibackupLabels...)

@@ -61,8 +61,10 @@ func (collector *serverCollector) Collect(ch chan<- prometheus.Metric) {
 
 	for _, ddbkp := range dedibackups {
 		var dedibackupLabels []string
+		// we get the integer part from "sd-1234"
 		splt := strings.Split(ddbkp.Login, "-")
 		sid := splt[len(splt)-1]
+
 		dedibackupLabels = append(dedibackupLabels, sid)
 		dedibackupLabels = append(dedibackupLabels, strconv.FormatBool(ddbkp.Active))
 

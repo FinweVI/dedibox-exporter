@@ -2,17 +2,20 @@ package collectors
 
 import (
 	"fmt"
+	"strings"
+
 	"github.com/FinweVI/dedibox-exporter/online"
 	"github.com/prometheus/client_golang/prometheus"
-	"strings"
 )
 
-type planCollector struct {
+// PlanCollector is a collector for the dedibox-related API focused on the plans availability
+type PlanCollector struct {
 	dediPlan *prometheus.Desc
 }
 
-func NewPlanCollector() *planCollector {
-	return &planCollector{
+// NewPlanCollector is a helper function to spawn a new PlanCollector
+func NewPlanCollector() *PlanCollector {
+	return &PlanCollector{
 		dediPlan: prometheus.NewDesc(
 			"dedibox_plan",
 			"Get Dedibox plan availability",
@@ -22,11 +25,13 @@ func NewPlanCollector() *planCollector {
 	}
 }
 
-func (collector *planCollector) Describe(ch chan<- *prometheus.Desc) {
+// Describe report all the metrics of the PlanCollector
+func (collector *PlanCollector) Describe(ch chan<- *prometheus.Desc) {
 	ch <- collector.dediPlan
 }
 
-func (collector *planCollector) Collect(ch chan<- prometheus.Metric) {
+// Collect gather all the metrics of the PlanCollector
+func (collector *PlanCollector) Collect(ch chan<- prometheus.Metric) {
 	plans, err := online.GetPlans()
 	if err != nil {
 		fmt.Printf("Unable to get plans informations!")

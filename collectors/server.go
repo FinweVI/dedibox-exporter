@@ -9,15 +9,17 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 )
 
-type serverCollector struct {
+// ServerCollector is a collector for the Server-related API
+type ServerCollector struct {
 	dedibackupQuotaSpaceMetric     *prometheus.Desc
 	dedibackupQuotaSpaceUsedMetric *prometheus.Desc
 	dedibackupQuotaFilesMetric     *prometheus.Desc
 	dedibackupQuotaFilesUsedMetric *prometheus.Desc
 }
 
-func NewServerCollector() *serverCollector {
-	return &serverCollector{
+// NewServerCollector is a helper function to spawn a new ServerCollector
+func NewServerCollector() *ServerCollector {
+	return &ServerCollector{
 		dedibackupQuotaSpaceMetric: prometheus.NewDesc(
 			"dedibox_dedibackup_quota_space_total_bytes",
 			"Get Dedibackup total space quota",
@@ -45,14 +47,16 @@ func NewServerCollector() *serverCollector {
 	}
 }
 
-func (collector *serverCollector) Describe(ch chan<- *prometheus.Desc) {
+// Describe report all the metrics of the ServerCollector
+func (collector *ServerCollector) Describe(ch chan<- *prometheus.Desc) {
 	ch <- collector.dedibackupQuotaSpaceMetric
 	ch <- collector.dedibackupQuotaSpaceUsedMetric
 	ch <- collector.dedibackupQuotaFilesMetric
 	ch <- collector.dedibackupQuotaFilesUsedMetric
 }
 
-func (collector *serverCollector) Collect(ch chan<- prometheus.Metric) {
+// Collect gather all the metrics of the ServerCollector
+func (collector *ServerCollector) Collect(ch chan<- prometheus.Metric) {
 	dedibackups, err := online.GetDedibackups()
 	if err != nil {
 		fmt.Printf("Unable to get dedibackups informations!")

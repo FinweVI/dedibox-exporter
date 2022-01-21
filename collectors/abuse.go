@@ -2,33 +2,43 @@ package collectors
 
 import (
 	"fmt"
-	"strconv"
 	"strings"
 
 	"github.com/FinweVI/dedibox-exporter/online"
 	"github.com/prometheus/client_golang/prometheus"
 )
 
-type abuseCollector struct {
-	abuseMetric *prometheus.Desc
+// AbuseCollector is a collector for the abuses-related API
+type AbuseCollector struct {
+	abuseMetric      *prometheus.Desc
+	abuseCountMetric *prometheus.Desc
 }
 
-func NewAbuseCollector() *abuseCollector {
-	return &abuseCollector{
+// NewAbuseCollector is a helper function to spawn a new AbuseCollector
+func NewAbuseCollector() *AbuseCollector {
+	return &AbuseCollector{
 		abuseMetric: prometheus.NewDesc(
 			"dedibox_abuse",
-			"Online.net's abuse and it's resolution status",
+			"Online.net's pending abuse and it's details",
 			[]string{"id", "sender", "service", "type"},
+			nil,
+		),
+		abuseCountMetric: prometheus.NewDesc(
+			"dedibox_abuse_count_total",
+			"Online.net's total unresolved abuses",
+			[]string{},
 			nil,
 		),
 	}
 }
 
-func (collector *abuseCollector) Describe(ch chan<- *prometheus.Desc) {
+// Describe report all the metrics of the AbuseCollector
+func (collector *AbuseCollector) Describe(ch chan<- *prometheus.Desc) {
 	ch <- collector.abuseMetric
 }
 
-func (collector *abuseCollector) Collect(ch chan<- prometheus.Metric) {
+// Collect gather all the metrics of the AbuseCollector
+func (collector *AbuseCollector) Collect(ch chan<- prometheus.Metric) {
 	abuses, err := online.GetAbuses()
 	if err != nil {
 		fmt.Println(err)

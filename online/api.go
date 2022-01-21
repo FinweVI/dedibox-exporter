@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"net/url"
 	"os"
 )
 
@@ -13,12 +14,15 @@ const API = "https://api.online.net/api/v1"
 func fetch(urlPart string) ([]byte, error) {
 	var output []byte
 
-	client := &http.Client{}
-	url := fmt.Sprintf("%s/%s", API, urlPart)
-
-	req, err := http.NewRequest("GET", url, nil)
+	u, err := url.Parse(fmt.Sprintf("%s/%s", API, urlPart))
 	if err != nil {
-		return output, fmt.Errorf("Unable to build URL for %s", urlPart)
+		return output, fmt.Errorf("Unable to build URL: %s", urlPart)
+	}
+
+	client := &http.Client{}
+	req, err := http.NewRequest("GET", u.String(), nil)
+	if err != nil {
+		return output, fmt.Errorf("Unable to build URL: %s", urlPart)
 	}
 
 	token := os.Getenv("ONLINE_API_TOKEN")

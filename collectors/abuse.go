@@ -46,9 +46,11 @@ func (collector *AbuseCollector) Collect(ch chan<- prometheus.Metric) {
 		return
 	}
 
+	ch <- prometheus.MustNewConstMetric(collector.abuseCountMetric, prometheus.GaugeValue, float64(len(abuses)))
+
 	for _, abs := range abuses {
 		var abuseLabels []string
-		abuseLabels = append(abuseLabels, strconv.Itoa(abs.ID))
+		abuseLabels = append(abuseLabels, abs.ID)
 		abuseLabels = append(abuseLabels, strings.ToLower(abs.Sender))
 		abuseLabels = append(abuseLabels, strings.ToLower(abs.Service))
 		abuseLabels = append(abuseLabels, strings.ToLower(abs.Category))

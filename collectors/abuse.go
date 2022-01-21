@@ -35,6 +35,7 @@ func NewAbuseCollector() *AbuseCollector {
 // Describe report all the metrics of the AbuseCollector
 func (collector *AbuseCollector) Describe(ch chan<- *prometheus.Desc) {
 	ch <- collector.abuseMetric
+	ch <- collector.abuseCountMetric
 }
 
 // Collect gather all the metrics of the AbuseCollector

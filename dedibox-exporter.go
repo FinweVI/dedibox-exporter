@@ -3,10 +3,11 @@ package main
 import (
 	"flag"
 	"fmt"
-	"log"
 	"net/http"
 	"os"
 	"strings"
+
+	log "github.com/sirupsen/logrus"
 
 	"github.com/FinweVI/dedibox-exporter/collectors"
 	"github.com/prometheus/client_golang/prometheus"
@@ -21,7 +22,7 @@ var (
 
 func main() {
 	if _, ok := os.LookupEnv("ONLINE_API_TOKEN"); !ok {
-		log.Fatalf("Please provide your API Token as an env var 'ONLINE_API_TOKEN'")
+		log.Fatal("Please provide your API Token as an env var 'ONLINE_API_TOKEN'")
 	}
 
 	flag.Var(&myCollectors, "collector", fmt.Sprintf("List of Collectors to enable (%s) (default \"abuse\")", strings.Join(validCollectors, ", ")))
@@ -31,6 +32,7 @@ func main() {
 
 	if len(myCollectors) == 0 {
 		myCollectors = append(myCollectors, "abuse")
+		log.Debug("No collector selected, using default configuration")
 	}
 
 	for _, cltr := range myCollectors {
@@ -46,8 +48,10 @@ func main() {
 		}
 	}
 
-	log.Printf("Dedibox Exporter")
-	log.Printf("Starting Server: %s", listenAddress)
+	log.WithFields(log.Fields{
+		"collectors": myCollectors,
+		"address":    listenAddress,
+	}).Info("Starting Dedibox Exporter")
 	http.Handle(metricsPath, promhttp.Handler())
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte(`<html>

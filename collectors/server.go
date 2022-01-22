@@ -1,12 +1,12 @@
 package collectors
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 
 	"github.com/FinweVI/dedibox-exporter/online"
 	"github.com/prometheus/client_golang/prometheus"
+	log "github.com/sirupsen/logrus"
 )
 
 // ServerCollector is a collector for the Server-related API
@@ -59,7 +59,12 @@ func (collector *ServerCollector) Describe(ch chan<- *prometheus.Desc) {
 func (collector *ServerCollector) Collect(ch chan<- prometheus.Metric) {
 	dedibackups, err := online.GetDedibackups()
 	if err != nil {
-		fmt.Printf("Unable to get dedibackups informations!")
+		log.WithFields(log.Fields{
+			"collector": "server",
+			"provider":  "online.net",
+			"source":    "api",
+		}).Error("Unable to retrieve informations")
+		log.Debug(err)
 		return
 	}
 

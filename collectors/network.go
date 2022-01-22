@@ -1,13 +1,13 @@
 package collectors
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 	"time"
 
 	"github.com/FinweVI/dedibox-exporter/online"
 	"github.com/prometheus/client_golang/prometheus"
+	log "github.com/sirupsen/logrus"
 )
 
 type DDoSCollector struct {
@@ -40,7 +40,12 @@ func (collector *DDoSCollector) Describe(ch chan<- *prometheus.Desc) {
 func (collector *DDoSCollector) Collect(ch chan<- prometheus.Metric) {
 	ddosList, err := online.GetDDoS()
 	if err != nil {
-		fmt.Printf("Unable to get DDoS informations")
+		log.WithFields(log.Fields{
+			"collector": "network",
+			"provider":  "online.net",
+			"source":    "api",
+		}).Error("Unable to retrieve informations")
+		log.Debug(err)
 		return
 	}
 

@@ -32,7 +32,8 @@ func main() {
 
 	if len(myCollectors) == 0 {
 		myCollectors = append(myCollectors, "abuse")
-		log.Debug("No collector selected, using default configuration")
+		log.WithField("collectors", myCollectors).
+			Debug("No collector selected, using default configuration")
 	}
 
 	for _, cltr := range myCollectors {

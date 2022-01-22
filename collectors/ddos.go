@@ -41,7 +41,7 @@ func (collector *DDoSCollector) Collect(ch chan<- prometheus.Metric) {
 	ddosList, err := online.GetDDoS()
 	if err != nil {
 		log.WithFields(log.Fields{
-			"collector": "network",
+			"collector": "ddos",
 			"provider":  "online.net",
 			"source":    "api",
 		}).Error("Unable to retrieve informations")

@@ -35,7 +35,7 @@ func (collector *PlanCollector) Collect(ch chan<- prometheus.Metric) {
 	plans, err := online.GetPlans()
 	if err != nil {
 		log.WithFields(log.Fields{
-			"collector": "dedibox",
+			"collector": "plan",
 			"provider":  "online.net",
 			"source":    "api",
 		}).Error("Unable to retrieve informations")

@@ -9,17 +9,17 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-// ServerCollector is a collector for the Server-related API
-type ServerCollector struct {
+// DedibackupCollector is a collector for the Dedibackup-related API
+type DedibackupCollector struct {
 	dedibackupQuotaSpaceMetric     *prometheus.Desc
 	dedibackupQuotaSpaceUsedMetric *prometheus.Desc
 	dedibackupQuotaFilesMetric     *prometheus.Desc
 	dedibackupQuotaFilesUsedMetric *prometheus.Desc
 }
 
-// NewServerCollector is a helper function to spawn a new ServerCollector
-func NewServerCollector() *ServerCollector {
-	return &ServerCollector{
+// NewDedibackupCollector is a helper function to spawn a new DedibackupCollector
+func NewDedibackupCollector() *DedibackupCollector {
+	return &DedibackupCollector{
 		dedibackupQuotaSpaceMetric: prometheus.NewDesc(
 			"dedibox_dedibackup_quota_space_total_bytes",
 			"Get Dedibackup total space quota",
@@ -47,20 +47,20 @@ func NewServerCollector() *ServerCollector {
 	}
 }
 
-// Describe report all the metrics of the ServerCollector
-func (collector *ServerCollector) Describe(ch chan<- *prometheus.Desc) {
+// Describe report all the metrics of the DedibackupCollector
+func (collector *DedibackupCollector) Describe(ch chan<- *prometheus.Desc) {
 	ch <- collector.dedibackupQuotaSpaceMetric
 	ch <- collector.dedibackupQuotaSpaceUsedMetric
 	ch <- collector.dedibackupQuotaFilesMetric
 	ch <- collector.dedibackupQuotaFilesUsedMetric
 }
 
-// Collect gather all the metrics of the ServerCollector
-func (collector *ServerCollector) Collect(ch chan<- prometheus.Metric) {
+// Collect gather all the metrics of the DedibackupCollector
+func (collector *DedibackupCollector) Collect(ch chan<- prometheus.Metric) {
 	dedibackups, err := online.GetDedibackups()
 	if err != nil {
 		log.WithFields(log.Fields{
-			"collector": "server",
+			"collector": "dedibackup",
 			"provider":  "online.net",
 			"source":    "api",
 		}).Error("Unable to retrieve informations")

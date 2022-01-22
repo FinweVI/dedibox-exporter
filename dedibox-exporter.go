@@ -18,6 +18,7 @@ var (
 	myCollectors  collectorSlice
 	listenAddress string
 	metricsPath   string
+	logLevel      int
 )
 
 func main() {
@@ -28,7 +29,10 @@ func main() {
 	flag.Var(&myCollectors, "collector", fmt.Sprintf("List of Collectors to enable (%s) (default \"abuse\")", strings.Join(validCollectors, ", ")))
 	flag.StringVar(&listenAddress, "listen-address", "127.0.0.1:9539", "Address to listen on for web interface and telemetry")
 	flag.StringVar(&metricsPath, "metric-path", "/metrics", "Path under which to expose metrics")
+	flag.IntVar(&logLevel, "log-level", 1, "Log level: 0=debug, 1=info, 2=warn, 3=error")
 	flag.Parse()
+
+	setLogLevel(logLevel)
 
 	if len(myCollectors) == 0 {
 		myCollectors = append(myCollectors, "abuse")

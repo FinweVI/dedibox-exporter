@@ -1,11 +1,11 @@
 package collectors
 
 import (
-	"fmt"
 	"strings"
 
 	"github.com/FinweVI/dedibox-exporter/online"
 	"github.com/prometheus/client_golang/prometheus"
+	log "github.com/sirupsen/logrus"
 )
 
 // PlanCollector is a collector for the dedibox-related API focused on the plans availability
@@ -34,7 +34,12 @@ func (collector *PlanCollector) Describe(ch chan<- *prometheus.Desc) {
 func (collector *PlanCollector) Collect(ch chan<- prometheus.Metric) {
 	plans, err := online.GetPlans()
 	if err != nil {
-		fmt.Printf("Unable to get plans informations!")
+		log.WithFields(log.Fields{
+			"collector": "dedibox",
+			"provider":  "online.net",
+			"source":    "api",
+		}).Error("Unable to retrieve informations")
+		log.Debug(err)
 		return
 	}
 

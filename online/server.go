@@ -37,14 +37,14 @@ func getServers() ([]Server, error) {
 	var tmpData []string
 	err = json.Unmarshal(body, &tmpData)
 	if err != nil {
-		return servers, fmt.Errorf("Unable to unmarshal the returned JSON for servers")
+		return servers, err
 	}
 
 	for _, serverLink := range tmpData {
 		splt := strings.Split(serverLink, "/")
 		sid, err := strconv.Atoi(splt[len(splt)-1])
 		if err != nil {
-			return servers, fmt.Errorf("Unable to transform str server ID to integer")
+			return servers, err
 		}
 		servers = append(servers, Server{ID: sid})
 	}
@@ -62,7 +62,7 @@ func getDedibackup(serverID int) (Dedibackup, error) {
 
 	err = json.Unmarshal(body, &dedibackup)
 	if err != nil {
-		return dedibackup, fmt.Errorf("Unable to unmarshal the JSON for the Dedibackup of the server %s", strconv.Itoa(serverID))
+		return dedibackup, err
 	}
 
 	return dedibackup, nil
@@ -99,7 +99,6 @@ func GetDedibackups() ([]Dedibackup, error) {
 	close(errors)
 
 	for err := range errors {
-		println(err.Error())
 		return dedibackups, err
 	}
 	for res := range results {

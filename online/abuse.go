@@ -2,7 +2,6 @@ package online
 
 import (
 	"encoding/json"
-	"fmt"
 )
 
 // Abuse Representation from Online.net's API, limited to what we need
@@ -28,7 +27,7 @@ func GetAbuses() ([]Abuse, error) {
 
 	err = json.Unmarshal(body, &abuses)
 	if err != nil {
-		return abuses, fmt.Errorf("Unable to unmarshal the returned JSON for abuses")
+		return abuses, err
 	}
 
 	return abuses, nil

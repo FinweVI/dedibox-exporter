@@ -2,7 +2,6 @@ package online
 
 import (
 	"encoding/json"
-	"fmt"
 
 	"github.com/mitchellh/mapstructure"
 )
@@ -53,7 +52,7 @@ func GetPlans() ([]Product, error) {
 	var ranges map[string]interface{}
 	err = json.Unmarshal(body, &ranges)
 	if err != nil {
-		return plans, fmt.Errorf("Unable to unmarshal Dedibox Ranges into a Map")
+		return plans, err
 	}
 
 	for _, dediplans := range ranges {
@@ -61,7 +60,7 @@ func GetPlans() ([]Product, error) {
 			var p Product
 			err = mapstructure.Decode(details, &p)
 			if err != nil {
-				return plans, fmt.Errorf("Unable to decode the Product data into the Product struct")
+				return plans, err
 			}
 			plans = append(plans, p)
 		}

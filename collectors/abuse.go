@@ -1,11 +1,11 @@
 package collectors
 
 import (
-	"fmt"
 	"strings"
 
 	"github.com/FinweVI/dedibox-exporter/online"
 	"github.com/prometheus/client_golang/prometheus"
+	log "github.com/sirupsen/logrus"
 )
 
 // AbuseCollector is a collector for the abuses-related API
@@ -42,8 +42,12 @@ func (collector *AbuseCollector) Describe(ch chan<- *prometheus.Desc) {
 func (collector *AbuseCollector) Collect(ch chan<- prometheus.Metric) {
 	abuses, err := online.GetAbuses()
 	if err != nil {
-		fmt.Println(err)
-		fmt.Printf("Unable to get abuses informations!")
+		log.WithFields(log.Fields{
+			"collector": "abuse",
+			"provider":  "online.net",
+			"source":    "api",
+		}).Error("Unable to retrieve informations")
+		log.Debug(err)
 		return
 	}
 

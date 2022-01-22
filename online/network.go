@@ -2,7 +2,6 @@ package online
 
 import (
 	"encoding/json"
-	"fmt"
 )
 
 // DDoS Representation of an attack
@@ -26,7 +25,7 @@ func GetDDoS() ([]DDoS, error) {
 
 	err = json.Unmarshal(body, &ddos)
 	if err != nil {
-		return ddos, fmt.Errorf("Unable to unmarshal JSON for the DDoS alert list")
+		return ddos, err
 	}
 
 	return ddos, nil

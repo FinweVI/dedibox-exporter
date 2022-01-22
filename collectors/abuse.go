@@ -60,11 +60,6 @@ func (collector *AbuseCollector) Collect(ch chan<- prometheus.Metric) {
 		abuseLabels = append(abuseLabels, strings.ToLower(abs.Service))
 		abuseLabels = append(abuseLabels, strings.ToLower(abs.Category))
 
-		var sts float64 = 0
-		if abs.Status == "Resolved" {
-			sts = 1
-		}
-
-		ch <- prometheus.MustNewConstMetric(collector.abuseMetric, prometheus.CounterValue, sts, abuseLabels...)
+		ch <- prometheus.MustNewConstMetric(collector.abuseMetric, prometheus.CounterValue, float64(0), abuseLabels...)
 	}
 }

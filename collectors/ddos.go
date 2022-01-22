@@ -11,19 +11,19 @@ import (
 )
 
 type DDoSCollector struct {
-	ddos      *prometheus.Desc
-	ddosCount *prometheus.Desc
+	ddosMetric      *prometheus.Desc
+	ddosCountMetric *prometheus.Desc
 }
 
 func NewDDoSCollector() *DDoSCollector {
 	return &DDoSCollector{
-		ddos: prometheus.NewDesc(
+		ddosMetric: prometheus.NewDesc(
 			"dedibox_ddos",
 			"Dedibox ongoing DDoS activity",
 			[]string{"id", "target", "mitigation_system", "attack_type"},
 			nil,
 		),
-		ddosCount: prometheus.NewDesc(
+		ddosCountMetric: prometheus.NewDesc(
 			"dedibox_ddos_count_total",
 			"Dedibox total count of ongoing DDoS alerts",
 			[]string{},
@@ -33,8 +33,8 @@ func NewDDoSCollector() *DDoSCollector {
 }
 
 func (collector *DDoSCollector) Describe(ch chan<- *prometheus.Desc) {
-	ch <- collector.ddos
-	ch <- collector.ddosCount
+	ch <- collector.ddosMetric
+	ch <- collector.ddosCountMetric
 }
 
 func (collector *DDoSCollector) Collect(ch chan<- prometheus.Metric) {
@@ -49,7 +49,7 @@ func (collector *DDoSCollector) Collect(ch chan<- prometheus.Metric) {
 		return
 	}
 
-	ch <- prometheus.MustNewConstMetric(collector.ddosCount, prometheus.GaugeValue, float64(len(ddosList)))
+	ch <- prometheus.MustNewConstMetric(collector.ddosCountMetric, prometheus.GaugeValue, float64(len(ddosList)))
 
 	for _, ddos := range ddosList {
 		var ddosLabels []string
@@ -65,6 +65,6 @@ func (collector *DDoSCollector) Collect(ch chan<- prometheus.Metric) {
 			sts = 1
 		}
 
-		ch <- prometheus.MustNewConstMetric(collector.ddos, prometheus.CounterValue, sts, ddosLabels...)
+		ch <- prometheus.MustNewConstMetric(collector.ddosMetric, prometheus.CounterValue, sts, ddosLabels...)
 	}
 }

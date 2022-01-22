@@ -18,14 +18,14 @@ type AbuseCollector struct {
 func NewAbuseCollector() *AbuseCollector {
 	return &AbuseCollector{
 		abuseMetric: prometheus.NewDesc(
-			"dedibox_abuse",
+			"dedibox_pending_abuse",
 			"Pending abuses",
-			[]string{"id", "sender", "service", "type"},
+			[]string{"service", "category"},
 			nil,
 		),
 		abuseCountMetric: prometheus.NewDesc(
-			"dedibox_abuse_count_total",
-			"Total pending abuse count",
+			"dedibox_pending_abuse_count",
+			"Pending abuse count",
 			[]string{},
 			nil,
 		),
@@ -55,16 +55,9 @@ func (collector *AbuseCollector) Collect(ch chan<- prometheus.Metric) {
 
 	for _, abs := range abuses {
 		var abuseLabels []string
-		abuseLabels = append(abuseLabels, abs.ID)
-		abuseLabels = append(abuseLabels, strings.ToLower(abs.Sender))
 		abuseLabels = append(abuseLabels, strings.ToLower(abs.Service))
 		abuseLabels = append(abuseLabels, strings.ToLower(abs.Category))
 
-		var sts float64 = 0
-		if abs.Status == "Resolved" {
-			sts = 1
-		}
-
-		ch <- prometheus.MustNewConstMetric(collector.abuseMetric, prometheus.CounterValue, sts, abuseLabels...)
+		ch <- prometheus.MustNewConstMetric(collector.abuseMetric, prometheus.CounterValue, float64(0), abuseLabels...)
 	}
 }

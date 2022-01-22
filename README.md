@@ -9,10 +9,10 @@ The goal of this exporter is to create alerts on new DDoS attacks or unresolved 
 
 | Name | Description | Labels |
 | -------- | -------- | -------- |
-| dedibox_abuse | Pending abuses | id, sender, service, type |
-| dedibox_abuse_count_total | Total pending abuse count | None |
-| dedibox_ddos | Ongoing DDoS attacks on your services | id, target, mitigation_system, attack_type |
-| dedibox_ddos_count_total | Total DDoS attacks count | None |
+| dedibox_pending_abuse | Pending abuses | service, category |
+| dedibox_pending_abuse_count | Pending abuse count | None |
+| dedibox_ddos | DDoS attacks on your services | target, mitigation_system, attack_type |
+| dedibox_ddos_count | DDoS attacks count | None |
 | dedibox_dedibackup_quota_space_total_bytes | Dedibackup total space quota | server_id, active |
 | dedibox_dedibackup_quota_space_used_bytes | Dedibackup used space quota | server_id, active |
 | dedibox_dedibackup_quota_files_total | Dedibackup total files quota | server_id, active |

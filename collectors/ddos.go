@@ -1,7 +1,6 @@
 package collectors
 
 import (
-	"strconv"
 	"strings"
 	"time"
 
@@ -19,13 +18,13 @@ func NewDDoSCollector() *DDoSCollector {
 	return &DDoSCollector{
 		ddosMetric: prometheus.NewDesc(
 			"dedibox_ddos",
-			"Ongoing DDoS attacks on your services",
-			[]string{"id", "target", "mitigation_system", "attack_type"},
+			"DDoS attacks on your services",
+			[]string{"target", "mitigation_system", "attack_type"},
 			nil,
 		),
 		ddosCountMetric: prometheus.NewDesc(
-			"dedibox_ddos_count_total",
-			"Total DDoS attacks count",
+			"dedibox_ddos_count",
+			"Recent DDoS attacks count",
 			[]string{},
 			nil,
 		),
@@ -53,7 +52,6 @@ func (collector *DDoSCollector) Collect(ch chan<- prometheus.Metric) {
 
 	for _, ddos := range ddosList {
 		var ddosLabels []string
-		ddosLabels = append(ddosLabels, strconv.Itoa(ddos.ID))
 		ddosLabels = append(ddosLabels, strings.ToLower(ddos.Target))
 		ddosLabels = append(ddosLabels, strings.ToLower(ddos.MitigationSystem))
 		ddosLabels = append(ddosLabels, strings.ToLower(ddos.AttackType))

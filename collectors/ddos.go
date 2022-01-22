@@ -19,13 +19,13 @@ func NewDDoSCollector() *DDoSCollector {
 	return &DDoSCollector{
 		ddosMetric: prometheus.NewDesc(
 			"dedibox_ddos",
-			"Dedibox ongoing DDoS activity",
+			"Ongoing DDoS attacks on your services",
 			[]string{"id", "target", "mitigation_system", "attack_type"},
 			nil,
 		),
 		ddosCountMetric: prometheus.NewDesc(
 			"dedibox_ddos_count_total",
-			"Dedibox total count of ongoing DDoS alerts",
+			"Total DDoS attacks count",
 			[]string{},
 			nil,
 		),

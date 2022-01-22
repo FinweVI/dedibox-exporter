@@ -22,25 +22,25 @@ func NewDedibackupCollector() *DedibackupCollector {
 	return &DedibackupCollector{
 		dedibackupQuotaSpaceMetric: prometheus.NewDesc(
 			"dedibox_dedibackup_quota_space_total_bytes",
-			"Get Dedibackup total space quota",
+			"Dedibackup total space quota",
 			[]string{"server_id", "active"},
 			nil,
 		),
 		dedibackupQuotaSpaceUsedMetric: prometheus.NewDesc(
 			"dedibox_dedibackup_quota_space_used_bytes",
-			"Get Dedibackup space quota used",
+			"Dedibackup used space quota",
 			[]string{"server_id", "active"},
 			nil,
 		),
 		dedibackupQuotaFilesMetric: prometheus.NewDesc(
 			"dedibox_dedibackup_quota_files_total",
-			"Get Dedibackup total quota files",
+			"Dedibackup total files quota",
 			[]string{"server_id", "active"},
 			nil,
 		),
 		dedibackupQuotaFilesUsedMetric: prometheus.NewDesc(
 			"dedibox_dedibackup_quota_files_used",
-			"Get Dedibackup used quota files",
+			"Dedibackup used files quota",
 			[]string{"server_id", "active"},
 			nil,
 		),

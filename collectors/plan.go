@@ -18,7 +18,7 @@ func NewPlanCollector() *PlanCollector {
 	return &PlanCollector{
 		dediboxPlanMetric: prometheus.NewDesc(
 			"dedibox_plan",
-			"Get Dedibox plan availability",
+			"Dedibox plans availability",
 			[]string{"name", "datacenter"},
 			nil,
 		),

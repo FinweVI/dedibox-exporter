@@ -19,13 +19,13 @@ func NewAbuseCollector() *AbuseCollector {
 	return &AbuseCollector{
 		abuseMetric: prometheus.NewDesc(
 			"dedibox_abuse",
-			"Online.net's pending abuse and it's details",
+			"Pending abuses",
 			[]string{"id", "sender", "service", "type"},
 			nil,
 		),
 		abuseCountMetric: prometheus.NewDesc(
 			"dedibox_abuse_count_total",
-			"Online.net's total unresolved abuses",
+			"Total pending abuse count",
 			[]string{},
 			nil,
 		),

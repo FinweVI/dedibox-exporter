@@ -41,7 +41,7 @@ func main() {
 		case "abuse":
 			prometheus.MustRegister(collectors.NewAbuseCollector())
 		case "dedibackup":
-			prometheus.MustRegister(collectors.NewServerCollector())
+			prometheus.MustRegister(collectors.NewDedibackupCollector())
 		case "plan":
 			prometheus.MustRegister(collectors.NewPlanCollector())
 		case "ddos":

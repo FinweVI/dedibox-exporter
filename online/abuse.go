@@ -2,16 +2,19 @@ package online
 
 import (
 	"encoding/json"
+	"time"
+
+	"github.com/gofrs/uuid"
 )
 
 // Abuse Representation from Online.net's API, limited to what we need
 type Abuse struct {
-	ID       string `json:"id"`
-	Date     string `json:"date"`
-	Status   string `json:"status"`
-	Sender   string `json:"sender"`
-	Service  string `json:"service"`
-	Category string `json:"type"`
+	ID       uuid.UUID `json:"id"`
+	Date     time.Time `json:"date"`
+	Status   string    `json:"status"`
+	Sender   string    `json:"sender"`
+	Service  string    `json:"service"`
+	Category string    `json:"type"`
 }
 
 // GetAbuses Retrieves all the pending abuses of an Online.net account

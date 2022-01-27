@@ -2,16 +2,17 @@ package online
 
 import (
 	"encoding/json"
+	"time"
 )
 
 // DDoS Representation of an attack
 type DDoS struct {
-	ID               int    `json:"id"`
-	Target           string `json:"target"`
-	StartDate        string `json:"start"`
-	EndDate          string `json:"end"`
-	MitigationSystem string `json:"mitigation"`
-	AttackType       string `json:"type"`
+	ID               int       `json:"id"`
+	Target           string    `json:"target"`
+	StartDate        time.Time `json:"start"`
+	EndDate          time.Time `json:"end"`
+	MitigationSystem string    `json:"mitigation"`
+	AttackType       string    `json:"type"`
 }
 
 // GetDDoS Retrieves the most recents DDoS alerts of an Online.net account

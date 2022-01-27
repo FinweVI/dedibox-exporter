@@ -2,7 +2,6 @@ package collectors
 
 import (
 	"strings"
-	"time"
 
 	"github.com/FinweVI/dedibox-exporter/online"
 	"github.com/prometheus/client_golang/prometheus"
@@ -57,9 +56,8 @@ func (collector *DDoSCollector) Collect(ch chan<- prometheus.Metric) {
 		ddosLabels = append(ddosLabels, strings.ToLower(ddos.AttackType))
 
 		var sts float64 = 0
-		_, err := time.Parse("2006-01-02", ddos.EndDate)
-		// No error means EndDate is available so the DDoS is not ongoing
-		if err == nil {
+		if !ddos.EndDate.IsZero() {
+			// If EndDate is not set to the Zero time, the DDoS is not ongoing
 			sts = 1
 		}
 

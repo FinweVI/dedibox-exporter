@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+added: unit tests around the whole project
+changed: `collectors` package now use the API client
+changed: `online` package now provide an API client
 changed: replaced `used` by `usage` in dedibackup usage metrics  
 changed: removed labels `id` and `sender` on dedibox_pending_abuse metrics  
 changed: removed label `id` on dedibox_ddos metric  

@@ -5,14 +5,14 @@ import "testing"
 func TestIsValidCollector(t *testing.T) {
 	for _, collector := range validCollectors {
 		if !isValidCollector(collector) {
-			t.Fatalf("Collector %s detected as non-valid", collector)
+			t.Errorf("Collector %s detected as non-valid", collector)
 		}
 	}
 
 	randomCollectors := []string{"toto", "tata", "test", "hello"}
 	for _, collector := range randomCollectors {
 		if isValidCollector(collector) {
-			t.Fatalf("Collector %s is detected as valid", collector)
+			t.Errorf("Collector %s is detected as valid", collector)
 		}
 	}
 }

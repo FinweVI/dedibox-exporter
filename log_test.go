@@ -12,23 +12,23 @@ func TestSetLogLevel(t *testing.T) {
 		switch i {
 		case 0:
 			if !log.IsLevelEnabled(log.DebugLevel) {
-				t.Fatal("DebugLevel not enabled")
+				t.Error("DebugLevel not enabled")
 			}
 		case 1:
 			if !log.IsLevelEnabled(log.InfoLevel) {
-				t.Fatal("InfoLevel not enabled")
+				t.Error("InfoLevel not enabled")
 			}
 		case 2:
 			if !log.IsLevelEnabled(log.WarnLevel) {
-				t.Fatal("WarnLevel not enabled")
+				t.Error("WarnLevel not enabled")
 			}
 		case 3:
 			if !log.IsLevelEnabled(log.ErrorLevel) {
-				t.Fatal("ErrorLevel not enabled")
+				t.Error("ErrorLevel not enabled")
 			}
 		case 4:
 			if !log.IsLevelEnabled(log.FatalLevel) {
-				t.Fatal("FatalLevel not enabled")
+				t.Error("FatalLevel not enabled")
 			}
 		}
 	}

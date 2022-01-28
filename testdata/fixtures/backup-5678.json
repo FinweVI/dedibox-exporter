@@ -1,0 +1,11 @@
+{
+  "login": "sd-5678",
+  "server": "dedibackup-dc2.online.net",
+  "active": false,
+  "acl_enabled": true,
+  "autologin": true,
+  "quota_space": 5000,
+  "quota_space_used": 70,
+  "quota_files": 70,
+  "quota_files_used": 50
+}

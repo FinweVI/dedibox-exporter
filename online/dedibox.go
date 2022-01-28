@@ -42,9 +42,9 @@ type Datacenter struct {
 }
 
 // GetPlans Retrieves the various offers and their availability
-func GetPlans() ([]Product, error) {
+func (c Client) GetPlans() ([]Product, error) {
 	var plans []Product
-	body, err := fetch("dedibox/plans")
+	body, err := c.query("dedibox/plans")
 	if err != nil {
 		return plans, err
 	}

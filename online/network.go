@@ -16,10 +16,10 @@ type DDoS struct {
 }
 
 // GetDDoS Retrieves the most recents DDoS alerts of an Online.net account
-func GetDDoS() ([]DDoS, error) {
+func (c Client) GetDDoS() ([]DDoS, error) {
 	var ddos []DDoS
 
-	body, err := fetch("network/ddos")
+	body, err := c.query("network/ddos")
 	if err != nil {
 		return ddos, err
 	}

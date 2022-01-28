@@ -11,6 +11,8 @@ import (
 
 // DedibackupCollector is a collector for the Dedibackup-related API
 type DedibackupCollector struct {
+	apiClient *online.Client
+
 	dedibackupQuotaSpaceMetric     *prometheus.Desc
 	dedibackupQuotaSpaceUsedMetric *prometheus.Desc
 	dedibackupQuotaFilesMetric     *prometheus.Desc
@@ -18,8 +20,10 @@ type DedibackupCollector struct {
 }
 
 // NewDedibackupCollector is a helper function to spawn a new DedibackupCollector
-func NewDedibackupCollector() *DedibackupCollector {
+func NewDedibackupCollector(client *online.Client) *DedibackupCollector {
 	return &DedibackupCollector{
+		apiClient: client,
+
 		dedibackupQuotaSpaceMetric: prometheus.NewDesc(
 			"dedibox_dedibackup_quota_space_total_bytes",
 			"Dedibackup total space quota",
@@ -57,7 +61,7 @@ func (collector *DedibackupCollector) Describe(ch chan<- *prometheus.Desc) {
 
 // Collect gather all the metrics of the DedibackupCollector
 func (collector *DedibackupCollector) Collect(ch chan<- prometheus.Metric) {
-	dedibackups, err := online.GetDedibackups()
+	dedibackups, err := collector.apiClient.GetDedibackups()
 	if err != nil {
 		log.WithFields(log.Fields{
 			"collector": "dedibackup",

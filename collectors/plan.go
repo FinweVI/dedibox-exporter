@@ -10,12 +10,16 @@ import (
 
 // PlanCollector is a collector for the dedibox-related API focused on the plans availability
 type PlanCollector struct {
+	apiClient *online.Client
+
 	dediboxPlanMetric *prometheus.Desc
 }
 
 // NewPlanCollector is a helper function to spawn a new PlanCollector
-func NewPlanCollector() *PlanCollector {
+func NewPlanCollector(client *online.Client) *PlanCollector {
 	return &PlanCollector{
+		apiClient: client,
+
 		dediboxPlanMetric: prometheus.NewDesc(
 			"dedibox_plan",
 			"Dedibox plans availability",
@@ -32,7 +36,7 @@ func (collector *PlanCollector) Describe(ch chan<- *prometheus.Desc) {
 
 // Collect gather all the metrics of the PlanCollector
 func (collector *PlanCollector) Collect(ch chan<- prometheus.Metric) {
-	plans, err := online.GetPlans()
+	plans, err := collector.apiClient.GetPlans()
 	if err != nil {
 		log.WithFields(log.Fields{
 			"collector": "plan",

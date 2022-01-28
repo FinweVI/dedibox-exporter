@@ -18,12 +18,12 @@ type Abuse struct {
 }
 
 // GetAbuses Retrieves all the pending abuses of an Online.net account
-func GetAbuses() ([]Abuse, error) {
+func (c Client) GetAbuses() ([]Abuse, error) {
 	var abuses []Abuse
 
 	// We fetch only the first page of *unresolved* abuses
 	// If you have more than one page... what are you doing on the Internet?
-	body, err := fetch("abuse?status=pending")
+	body, err := c.query("abuse?status=pending")
 	if err != nil {
 		return abuses, err
 	}

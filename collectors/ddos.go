@@ -9,22 +9,19 @@ import (
 )
 
 type DDoSCollector struct {
-	ddosMetric      *prometheus.Desc
-	ddosCountMetric *prometheus.Desc
+	apiClient *online.Client
+
+	ddosMetric *prometheus.Desc
 }
 
-func NewDDoSCollector() *DDoSCollector {
+func NewDDoSCollector(client *online.Client) *DDoSCollector {
 	return &DDoSCollector{
+		apiClient: client,
+
 		ddosMetric: prometheus.NewDesc(
 			"dedibox_ddos",
 			"DDoS attacks on your services",
 			[]string{"target", "mitigation_system", "attack_type"},
-			nil,
-		),
-		ddosCountMetric: prometheus.NewDesc(
-			"dedibox_ddos_count",
-			"Recent DDoS attacks count",
-			[]string{},
 			nil,
 		),
 	}
@@ -32,11 +29,10 @@ func NewDDoSCollector() *DDoSCollector {
 
 func (collector *DDoSCollector) Describe(ch chan<- *prometheus.Desc) {
 	ch <- collector.ddosMetric
-	ch <- collector.ddosCountMetric
 }
 
 func (collector *DDoSCollector) Collect(ch chan<- prometheus.Metric) {
-	ddosList, err := online.GetDDoS()
+	ddosList, err := collector.apiClient.GetDDoS()
 	if err != nil {
 		log.WithFields(log.Fields{
 			"collector": "ddos",
@@ -46,8 +42,6 @@ func (collector *DDoSCollector) Collect(ch chan<- prometheus.Metric) {
 		log.Debug(err)
 		return
 	}
-
-	ch <- prometheus.MustNewConstMetric(collector.ddosCountMetric, prometheus.GaugeValue, float64(len(ddosList)))
 
 	for _, ddos := range ddosList {
 		var ddosLabels []string

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "fa67aa99-8a13-4a38-99ce-4e9c69ddc4f7",
+    "date": "2022-01-27T15:04:05Z",
+    "type": "string",
+    "status": "resolved",
+    "service": "string",
+    "sent_date": "2022-01-27T15:04:05Z",
+    "sender": "string",
+    "description": "string",
+    "resolved_date": "2022-01-27T15:04:05Z",
+    "resolver": "string",
+    "answer": "string",
+    "solution": "string",
+    "details": {
+      "ip": {
+        "address": "string",
+        "type": "public",
+        "reverse": "string",
+        "mac": "string",
+        "destination": "string",
+        "status": "active",
+        "switch_port_state": "string",
+        "server": {
+          "$ref": "string"
+        }
+      }
+    }
+  }
+]

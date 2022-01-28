@@ -10,21 +10,21 @@ import (
 	log "github.com/sirupsen/logrus"
 
 	"github.com/FinweVI/dedibox-exporter/collectors"
+	"github.com/FinweVI/dedibox-exporter/online"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
-var (
-	myCollectors  collectorSlice
-	listenAddress string
-	metricsPath   string
-	logLevel      int
-)
-
 func main() {
-	if _, ok := os.LookupEnv("ONLINE_API_TOKEN"); !ok {
-		log.Fatal("Please provide your API Token as an env var 'ONLINE_API_TOKEN'")
-	}
+	var (
+		c   *online.Client
+		err error
+
+		myCollectors  collectorSlice
+		listenAddress string
+		metricsPath   string
+		logLevel      int
+	)
 
 	flag.Var(&myCollectors, "collector", fmt.Sprintf("List of Collectors to enable (%s) (default \"abuse\")", strings.Join(validCollectors, ", ")))
 	flag.StringVar(&listenAddress, "listen-address", "127.0.0.1:9539", "Address to listen on for web interface and telemetry")
@@ -34,8 +34,18 @@ func main() {
 
 	setLogLevel(logLevel)
 
+	if token, ok := os.LookupEnv("ONLINE_API_TOKEN"); !ok {
+		log.Fatal("Please provide your API Token as an env var 'ONLINE_API_TOKEN'")
+	} else {
+		c, err = online.NewClient(online.AuthToken(token))
+		if err != nil {
+			log.Error("Unable to create API client")
+			log.Debug(err)
+		}
+	}
+
 	if len(myCollectors) == 0 {
-		myCollectors = append(myCollectors, "abuse")
+		myCollectors.SetDefaultCollector()
 		log.WithField("collectors", myCollectors).
 			Debug("No collector selected, using default configuration")
 	}
@@ -43,13 +53,13 @@ func main() {
 	for _, cltr := range myCollectors {
 		switch cltr {
 		case "abuse":
-			prometheus.MustRegister(collectors.NewAbuseCollector())
+			prometheus.MustRegister(collectors.NewAbuseCollector(c))
 		case "dedibackup":
-			prometheus.MustRegister(collectors.NewDedibackupCollector())
+			prometheus.MustRegister(collectors.NewDedibackupCollector(c))
 		case "plan":
-			prometheus.MustRegister(collectors.NewPlanCollector())
+			prometheus.MustRegister(collectors.NewPlanCollector(c))
 		case "ddos":
-			prometheus.MustRegister(collectors.NewDDoSCollector())
+			prometheus.MustRegister(collectors.NewDDoSCollector(c))
 		}
 	}
 

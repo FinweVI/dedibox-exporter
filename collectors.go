@@ -36,9 +36,13 @@ func (cs *collectorSlice) Set(cltr string) error {
 		if isValidCollector(cltr) {
 			*cs = append(*cs, cltr)
 		} else {
-			return fmt.Errorf("Choose between: %s", strings.Join(validCollectors, ", "))
+			return fmt.Errorf("choose between: %s", strings.Join(validCollectors, ", "))
 		}
 	}
 
 	return nil
+}
+
+func (cs *collectorSlice) SetDefaultCollector() {
+	cs.Set(validCollectors[0])
 }

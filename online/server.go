@@ -26,10 +26,10 @@ type Dedibackup struct {
 	QuotaFilesUsed int    `json:"quota_files_used"`
 }
 
-func getServers() ([]Server, error) {
+func (c Client) getServers() ([]Server, error) {
 	var servers []Server
 
-	body, err := fetch("server")
+	body, err := c.query("server")
 	if err != nil {
 		return servers, err
 	}
@@ -52,10 +52,10 @@ func getServers() ([]Server, error) {
 	return servers, nil
 }
 
-func getDedibackup(serverID int) (Dedibackup, error) {
+func (c Client) getDedibackup(serverID int) (Dedibackup, error) {
 	var dedibackup Dedibackup
 
-	body, err := fetch(fmt.Sprintf("server/backup/%s", strconv.Itoa(serverID)))
+	body, err := c.query(fmt.Sprintf("server/backup/%s", strconv.Itoa(serverID)))
 	if err != nil {
 		return dedibackup, err
 	}
@@ -69,10 +69,10 @@ func getDedibackup(serverID int) (Dedibackup, error) {
 }
 
 // GetDedibackups Retrieves all the dedibackups and their statuses
-func GetDedibackups() ([]Dedibackup, error) {
+func (c Client) GetDedibackups() ([]Dedibackup, error) {
 	var dedibackups []Dedibackup
 
-	srvs, err := getServers()
+	srvs, err := c.getServers()
 	if err != nil {
 		return dedibackups, err
 	}
@@ -85,7 +85,7 @@ func GetDedibackups() ([]Dedibackup, error) {
 		wg.Add(1)
 		go func(sid int) {
 			defer wg.Done()
-			dedibkp, err := getDedibackup(sid)
+			dedibkp, err := c.getDedibackup(sid)
 			if err != nil {
 				errors <- err
 				return

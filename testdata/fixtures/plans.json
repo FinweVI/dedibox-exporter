@@ -1,0 +1,2207 @@
+{
+  "Start Range": {
+    "Start-2-S-SSD": {
+      "id": 14083,
+      "price": "13.99",
+      "specs": {
+        "cpu": "Intel® C2350 (Avoton)",
+        "ram": "4 GB",
+        "pmem": [],
+        "disks": "1 x 120 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "250 Mbit/sec",
+        "customizable": false
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Start-2-S-SSD"
+    },
+    "Start-2-XS-SATA": {
+      "id": 14089,
+      "price": "13.99",
+      "specs": {
+        "cpu": "Intel® C2350 (Avoton)",
+        "ram": "4 GB",
+        "pmem": [],
+        "disks": "1 x 500 GB",
+        "bp": "1Gbit/sec",
+        "policer_rate": "250 Mbit/sec",
+        "customizable": false
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Start-2-XS-SATA"
+    },
+    "Start-2-S-SATA": {
+      "id": 11986,
+      "price": "14.99",
+      "specs": {
+        "cpu": "Intel® C2350 (Avoton)",
+        "ram": "4 GB",
+        "pmem": [],
+        "disks": "1 x 1 TB",
+        "bp": "1Gbit/sec",
+        "policer_rate": "250 Mbit/sec",
+        "customizable": false
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 3
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 4
+        }
+      ],
+      "slug": "Start-2-S-SATA"
+    },
+    "Start-1-M-SATA": {
+      "id": 14118,
+      "price": "17.99",
+      "specs": {
+        "cpu": "Intel® C2750 (Avoton)",
+        "ram": "8 GB",
+        "pmem": [],
+        "disks": "1 x 1 TB",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "100 Mbit/sec",
+        "customizable": false
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Start-1-M-SATA"
+    },
+    "Start-1-M-SSD-160G": {
+      "id": 12053,
+      "price": "17.99",
+      "specs": {
+        "cpu": "Intel® C2750 (Avoton)",
+        "ram": "8 GB",
+        "pmem": [],
+        "disks": "1 x 160 GB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "100 Mbit/sec",
+        "customizable": false
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Start-1-M-SSD-160G"
+    },
+    "Start-1-M-SSD": {
+      "id": 11952,
+      "price": "17.99",
+      "specs": {
+        "cpu": "Intel® C2750 (Avoton)",
+        "ram": "8 GB",
+        "pmem": [],
+        "disks": "1 x 120 GB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "100 Mbit/sec",
+        "customizable": false
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Start-1-M-SSD"
+    },
+    "Start-3-S-SSD": {
+      "id": 14092,
+      "price": "19.99",
+      "specs": {
+        "cpu": "Intel® C2350 (Avoton)",
+        "ram": "4 GB",
+        "pmem": [],
+        "disks": "1 x 250 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "250 Mbit/sec",
+        "customizable": false
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Start-3-S-SSD"
+    },
+    "Start-2-M-SATA": {
+      "id": 11972,
+      "price": "24.99",
+      "specs": {
+        "cpu": "Intel® C2750 (Avoton)",
+        "ram": "16 GB",
+        "pmem": [],
+        "disks": "1 x 1 TB",
+        "bp": "1Gbit/sec",
+        "policer_rate": "250 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "2500"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 1
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Start-2-M-SATA"
+    },
+    "Start-2-M-SSD": {
+      "id": 14099,
+      "price": "24.99",
+      "specs": {
+        "cpu": "Intel® C2750 (Avoton)",
+        "ram": "16 GB",
+        "pmem": [],
+        "disks": "1 x 250 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "250 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Start-2-M-SSD"
+    },
+    "Start-1-L": {
+      "id": 11946,
+      "price": "31.99",
+      "specs": {
+        "cpu": "Intel® Xeon E3 1220v2",
+        "ram": "16 GB",
+        "pmem": [],
+        "disks": "2 x 1 TB",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "200 Mbit/sec",
+        "customizable": false
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Start-1-L"
+    },
+    "Start-2-L": {
+      "id": 14108,
+      "price": "41.99",
+      "specs": {
+        "cpu": "Intel® Xeon® D-1531",
+        "ram": "32 GB",
+        "pmem": [],
+        "disks": "2 x 250 GB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "300 Mbit/sec",
+        "customizable": false
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Start-2-L"
+    },
+    "Start-3-L": {
+      "id": 14091,
+      "price": "58.99",
+      "specs": {
+        "cpu": "Intel® Xeon® D-1531",
+        "ram": "32 GB",
+        "pmem": [],
+        "disks": "2 x 500 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "300 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Start-3-L"
+    }
+  },
+  "Pro Range": {
+    "Pro-5-S-LE": {
+      "id": 12054,
+      "price": "54.99",
+      "specs": {
+        "cpu": "Intel® Xeon E3 1240v6",
+        "ram": "32 GB",
+        "pmem": [],
+        "disks": "2 x 250 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "300 Mbit/sec",
+        "customizable": false
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-5-S-LE"
+    },
+    "Pro-2-M-SATA": {
+      "id": 11940,
+      "price": "55.99",
+      "specs": {
+        "cpu": "Intel® Xeon E3 1230v3",
+        "ram": "32 GB",
+        "pmem": [],
+        "disks": "2 x 2 TB",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "100 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-2-M-SATA"
+    },
+    "Pro-5-S": {
+      "id": 14114,
+      "price": "62.99",
+      "specs": {
+        "cpu": "Intel® Xeon E3 1240v6",
+        "ram": "32 GB",
+        "pmem": [],
+        "disks": "3 x 250 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "300 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-5-S"
+    },
+    "Pro-4-S": {
+      "id": 14117,
+      "price": "62.99",
+      "specs": {
+        "cpu": "Intel® Xeon E3 1245v5",
+        "ram": "32 GB",
+        "pmem": [],
+        "disks": "3 x 250 GB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "300 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-4-S"
+    },
+    "Pro-6-XS": {
+      "id": 14106,
+      "price": "77.99",
+      "specs": {
+        "cpu": "Intel® Xeon® D-1531",
+        "ram": "32 GB",
+        "pmem": [],
+        "disks": "2 x 500 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-6-XS"
+    },
+    "Pro-5-M": {
+      "id": 12018,
+      "price": "84.99",
+      "specs": {
+        "cpu": "Intel® Xeon E3 1240v6",
+        "ram": "64 GB",
+        "pmem": [],
+        "disks": "3 x 500 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-5-M"
+    },
+    "Pro-4-M": {
+      "id": 11984,
+      "price": "84.99",
+      "specs": {
+        "cpu": "Intel® Xeon E3 1245v5",
+        "ram": "64 GB",
+        "pmem": [],
+        "disks": "3 x 500 GB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "300 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-4-M"
+    },
+    "Pro-7-S": {
+      "id": 12072,
+      "price": "90.99",
+      "specs": {
+        "cpu": "Intel Xeon E-2246G",
+        "ram": "32 GB",
+        "pmem": [],
+        "disks": "2 x 480 GB SSD_NVME",
+        "bp": "1Gbit/sec",
+        "policer_rate": "750 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 147
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-7-S"
+    },
+    "Pro-3-L-SSD-160": {
+      "id": 11947,
+      "price": "91.99",
+      "specs": {
+        "cpu": "Intel® Xeon E5 1410v2",
+        "ram": "96 GB",
+        "pmem": [],
+        "disks": "2 x 160 GB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "400 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-3-L-SSD-160"
+    },
+    "Pro-3-L-SSD": {
+      "id": 11969,
+      "price": "91.99",
+      "specs": {
+        "cpu": "Intel® Xeon E5 1410v2",
+        "ram": "96 GB",
+        "pmem": [],
+        "disks": "2 x 500 GB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "400 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-3-L-SSD"
+    },
+    "Pro-3-L-SATA": {
+      "id": 11968,
+      "price": "91.99",
+      "specs": {
+        "cpu": "Intel® Xeon E5 1410v2",
+        "ram": "96 GB",
+        "pmem": [],
+        "disks": "2 x 4 TB",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "400 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-3-L-SATA"
+    },
+    "Pro-6-S": {
+      "id": 14112,
+      "price": "92.99",
+      "specs": {
+        "cpu": "Intel® Xeon E3 1240v6",
+        "ram": "64 GB",
+        "pmem": [],
+        "disks": "2 x 500 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-6-S"
+    },
+    "Pro-6-M": {
+      "id": 14078,
+      "price": "122.99",
+      "specs": {
+        "cpu": "Intel® Xeon E3 1240v6",
+        "ram": "64 GB",
+        "pmem": [],
+        "disks": "3 x 1 TB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-6-M"
+    },
+    "Pro-7-M": {
+      "id": 12074,
+      "price": "135.99",
+      "specs": {
+        "cpu": "Intel Xeon E-2246G",
+        "ram": "64 GB",
+        "pmem": [],
+        "disks": "2 x 960 GB SSD_NVME",
+        "bp": "1Gbit/sec",
+        "policer_rate": "750 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-7-M"
+    },
+    "Pro-4-L": {
+      "id": 14094,
+      "price": "152.99",
+      "specs": {
+        "cpu": "Intel® Xeon E5 1650v3",
+        "ram": "96 GB",
+        "pmem": [],
+        "disks": "3 x 500 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Pro-4-L"
+    },
+    "Pro-5-L": {
+      "id": 14110,
+      "price": "227.99",
+      "specs": {
+        "cpu": "AMD EPYC 7281",
+        "ram": "96 GB",
+        "pmem": [],
+        "disks": "2 x 1 TB SSD_NVME",
+        "bp": "1Gbit/sec",
+        "policer_rate": "750 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 2
+        }
+      ],
+      "slug": "Pro-5-L"
+    }
+  },
+  "Core Range": {
+    "Core-3-S-SSD": {
+      "id": 11955,
+      "price": "131.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2620v2",
+        "ram": "128 GB",
+        "pmem": [],
+        "disks": "2 x 500 GB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "400 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-3-S-SSD"
+    },
+    "Core-4-S-SATA": {
+      "id": 12031,
+      "price": "151.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2620v4",
+        "ram": "128 GB",
+        "pmem": [],
+        "disks": "2 x 6 TB",
+        "bp": "1Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-4-S-SATA"
+    },
+    "Core-3-S-SATA": {
+      "id": 11965,
+      "price": "151.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2620v3",
+        "ram": "128 GB",
+        "pmem": [],
+        "disks": "2 x 4 TB",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "400 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-3-S-SATA"
+    },
+    "Core-2-M-SSD": {
+      "id": 11948,
+      "price": "191.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2650v2",
+        "ram": "192 GB",
+        "pmem": [],
+        "disks": "3 x 160 GB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-2-M-SSD"
+    },
+    "Core-4-S-SSD": {
+      "id": 14093,
+      "price": "227.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2620v4",
+        "ram": "128 GB",
+        "pmem": [],
+        "disks": "3 x 500 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-4-S-SSD"
+    },
+    "Core-2-M-SATA": {
+      "id": 14090,
+      "price": "244.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2640v3",
+        "ram": "192 GB",
+        "pmem": [],
+        "disks": "3 x 4 TB",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-2-M-SATA"
+    },
+    "Core-3-M-SSD": {
+      "id": 14101,
+      "price": "244.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2640v3",
+        "ram": "192 GB",
+        "pmem": [],
+        "disks": "3 x 500 GB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-3-M-SSD"
+    },
+    "Core-3-L-SSD": {
+      "id": 11964,
+      "price": "262.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2660v3",
+        "ram": "256 GB",
+        "pmem": [],
+        "disks": "3 x 500 GB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-3-L-SSD"
+    },
+    "Core-3-M-SATA": {
+      "id": 14082,
+      "price": "272.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2640v3",
+        "ram": "192 GB",
+        "pmem": [],
+        "disks": "3 x 6 TB",
+        "bp": "1Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-3-M-SATA"
+    },
+    "Core-3-L-SATA": {
+      "id": 11962,
+      "price": "289.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2660v3",
+        "ram": "256 GB",
+        "pmem": [],
+        "disks": "3 x 4 TB",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-3-L-SATA"
+    },
+    "Core-6-XS": {
+      "id": 14086,
+      "price": "302.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon Silver 4114",
+        "ram": "96 GB",
+        "pmem": [],
+        "disks": "2 x 1 TB SSD_NVME",
+        "bp": "1Gbit/sec",
+        "policer_rate": "1 Gbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-6-XS"
+    },
+    "Core-4-M-SATA": {
+      "id": 14107,
+      "price": "332.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2640v4",
+        "ram": "192 GB",
+        "pmem": [],
+        "disks": "3 x 6 TB",
+        "bp": "1Gbit/sec",
+        "policer_rate": "750 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-4-M-SATA"
+    },
+    "Core-4-M-SSD": {
+      "id": 14084,
+      "price": "332.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2640v4",
+        "ram": "192 GB",
+        "pmem": [],
+        "disks": "5 x 500 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "750 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-4-M-SSD"
+    },
+    "Core-5-S": {
+      "id": 14113,
+      "price": "382.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon Silver 4114",
+        "ram": "128 GB",
+        "pmem": [],
+        "disks": "2 x 1 TB SSD_NVME",
+        "bp": "1Gbit/sec",
+        "policer_rate": "1 Gbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 6
+        }
+      ],
+      "slug": "Core-5-S"
+    },
+    "Core-5-M": {
+      "id": 14105,
+      "price": "392.99",
+      "specs": {
+        "cpu": "AMD EPYC 7401P",
+        "ram": "256 GB",
+        "pmem": [],
+        "disks": "3 x 1 TB SSD_NVME",
+        "bp": "1Gbit/sec",
+        "policer_rate": "1 Gbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 101
+        }
+      ],
+      "slug": "Core-5-M"
+    },
+    "Core-6-M": {
+      "id": 14116,
+      "price": "392.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon Silver 4114",
+        "ram": "192 GB",
+        "pmem": [],
+        "disks": "2 x 1 TB SSD_NVME",
+        "bp": "1Gbit/sec",
+        "policer_rate": "1 Gbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 1
+        }
+      ],
+      "slug": "Core-6-M"
+    },
+    "Core-7-M-I": {
+      "id": 12070,
+      "price": "400.99",
+      "specs": {
+        "cpu": "2 x Intel Xeon Silver 4214R",
+        "ram": "192 GB",
+        "pmem": [],
+        "disks": "2 x 1.92 TB SSD_NVME",
+        "bp": "25 Gbit/sec",
+        "policer_rate": "1 Gbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "10000",
+        "rpn_business_speed": "25000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-7-M-I"
+    },
+    "Core-7-M-A": {
+      "id": 12068,
+      "price": "400.99",
+      "specs": {
+        "cpu": "AMD EPYC™ 7302P",
+        "ram": "256 GB",
+        "pmem": [],
+        "disks": "2 x 1.92 TB SSD_NVME",
+        "bp": "25 Gbit/sec",
+        "policer_rate": "1 Gbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "10000",
+        "rpn_business_speed": "25000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 1
+        }
+      ],
+      "slug": "Core-7-M-A"
+    },
+    "Core-7-L-A": {
+      "id": 14080,
+      "price": "419.99",
+      "specs": {
+        "cpu": "AMD EPYC 7532",
+        "ram": "256 GB",
+        "pmem": [],
+        "disks": "2 x 1.92 TB SSD_NVME",
+        "bp": "25 Gbit/sec",
+        "policer_rate": "1 Gbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "10000",
+        "rpn_business_speed": "25000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 5
+        }
+      ],
+      "slug": "Core-7-L-A"
+    },
+    "Core-7-L-I": {
+      "id": 14115,
+      "price": "433.99",
+      "specs": {
+        "cpu": "2 x Intel Xeon Silver 4214R",
+        "ram": "576 GB",
+        "pmem": [],
+        "disks": "2 x 1.92 TB SSD_NVME",
+        "bp": "25 Gbit/sec",
+        "policer_rate": "1 Gbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "10000",
+        "rpn_business_speed": "25000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 1
+        }
+      ],
+      "slug": "Core-7-L-I"
+    },
+    "Core-4-L-SATA": {
+      "id": 14088,
+      "price": "482.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2660v4",
+        "ram": "256 GB",
+        "pmem": [],
+        "disks": "3 x 6 TB",
+        "bp": "1Gbit/sec",
+        "policer_rate": "750 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-4-L-SATA"
+    },
+    "Core-4-L-SSD": {
+      "id": 14095,
+      "price": "482.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2660v4",
+        "ram": "256 GB",
+        "pmem": [],
+        "disks": "5 x 500 GB SSD",
+        "bp": "1Gbit/sec",
+        "policer_rate": "750 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Core-4-L-SSD"
+    },
+    "Core-7-XL-I": {
+      "id": 12066,
+      "price": "595.99",
+      "specs": {
+        "cpu": "2 x Intel Xeon Gold 6242R",
+        "ram": "384 GB",
+        "pmem": [],
+        "disks": "2 x 1.92 TB SSD_NVME",
+        "bp": "25 Gbit/sec",
+        "policer_rate": "1 Gbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "10000",
+        "rpn_business_speed": "25000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 6,
+            "name": "AMS1",
+            "address": null,
+            "zip": null,
+            "city": "Amsterdam",
+            "country": "NL"
+          },
+          "stock": 5
+        }
+      ],
+      "slug": "Core-7-XL-I"
+    },
+    "Core-5-L": {
+      "id": 12045,
+      "price": "676.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon Gold 5120",
+        "ram": "384 GB",
+        "pmem": [],
+        "disks": "4 x 1 TB SSD_NVME",
+        "bp": "1Gbit/sec",
+        "policer_rate": "1 Gbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 4
+        }
+      ],
+      "slug": "Core-5-L"
+    },
+    "Core-5-XL": {
+      "id": 12047,
+      "price": "938.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon Gold 6140",
+        "ram": "768 GB",
+        "pmem": [],
+        "disks": "8 x 1 TB SSD_NVME",
+        "bp": "1Gbit/sec",
+        "policer_rate": "1 Gbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 3
+        }
+      ],
+      "slug": "Core-5-XL"
+    },
+    "Core-7-XXL-A": {
+      "id": 12060,
+      "price": "1 300.99",
+      "specs": {
+        "cpu": "2 x AMD EPYC 7532",
+        "ram": "1024 GB",
+        "pmem": [],
+        "disks": "2 x 1.92 TB SSD_NVME",
+        "bp": "25 Gbit/sec",
+        "policer_rate": "1 Gbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "10000",
+        "rpn_business_speed": "25000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 6
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 6
+        }
+      ],
+      "slug": "Core-7-XXL-A"
+    }
+  },
+  "Store Range": {
+    "Store-1-S": {
+      "id": 14087,
+      "price": "46.99",
+      "specs": {
+        "cpu": "Intel® Xeon E3 1220",
+        "ram": "32 GB",
+        "pmem": [],
+        "disks": "2 x 4 TB",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "150 Mbit/sec",
+        "customizable": false
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 2,
+            "name": "DC2",
+            "address": "29 rue Edith Cavell",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Store-1-S"
+    },
+    "Store-2-M": {
+      "id": 12020,
+      "price": "81.99",
+      "specs": {
+        "cpu": "Intel® Xeon E5 1410v2",
+        "ram": "64 GB",
+        "pmem": [],
+        "disks": "3 x 6 TB",
+        "bp": "1Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Store-2-M"
+    },
+    "Store-2-S": {
+      "id": 11941,
+      "price": "88.99",
+      "specs": {
+        "cpu": "Intel® Xeon E3 1230v2",
+        "ram": "16 GB",
+        "pmem": [],
+        "disks": "4 x 3 TB",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "400 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "100",
+        "rpn_business_speed": "1000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Store-2-S"
+    },
+    "Store-4-M": {
+      "id": 14100,
+      "price": "182.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2620v3",
+        "ram": "128 GB",
+        "pmem": [],
+        "disks": "4 x 6 TB",
+        "bp": "1Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Store-4-M"
+    },
+    "Store-1-L": {
+      "id": 11944,
+      "price": "221.99",
+      "specs": {
+        "cpu": "AMD Opteron 4386",
+        "ram": "64 GB",
+        "pmem": [],
+        "disks": "12 x 4 TB",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Store-1-L"
+    },
+    "Store-4-L": {
+      "id": 14104,
+      "price": "266.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2660v3",
+        "ram": "192 GB",
+        "pmem": [],
+        "disks": "5 x 6 TB",
+        "bp": "1Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Store-4-L"
+    },
+    "Store-2-L": {
+      "id": 14081,
+      "price": "332.99",
+      "specs": {
+        "cpu": "Intel® Xeon E5 1620v4",
+        "ram": "64 GB",
+        "pmem": [],
+        "disks": "12 x 4 TB",
+        "bp": "1Gbit/sec",
+        "policer_rate": "300 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Store-2-L"
+    },
+    "Store-2-XXL": {
+      "id": 11951,
+      "price": "370.99",
+      "specs": {
+        "cpu": "AMD Opteron 4386",
+        "ram": "64 GB",
+        "pmem": [],
+        "disks": "12 x 6 TB",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": true,
+        "rpn_basic_speed": "10000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Store-2-XXL"
+    },
+    "Store-4-XL": {
+      "id": 14098,
+      "price": "422.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2620v3",
+        "ram": "96 GB",
+        "pmem": [],
+        "disks": "24 x 500 GB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Store-4-XL"
+    },
+    "Store-4-XXL": {
+      "id": 14111,
+      "price": "686.99",
+      "specs": {
+        "cpu": "2 x Intel® Xeon E5 2620v3",
+        "ram": "96 GB",
+        "pmem": [],
+        "disks": "24 x 1 TB SSD",
+        "bp": "1 Gbit/sec",
+        "policer_rate": "500 Mbit/sec",
+        "customizable": false,
+        "rpn_basic_speed": "1000",
+        "rpn_business_speed": "10000"
+      },
+      "stocks": [
+        {
+          "datacenter": {
+            "id": 3,
+            "name": "DC3",
+            "address": "61 rue Julian Grimau",
+            "zip": "94400",
+            "city": "Vitry",
+            "country": "FR"
+          },
+          "stock": 0
+        },
+        {
+          "datacenter": {
+            "id": 5,
+            "name": "DC5",
+            "address": "",
+            "zip": "95310",
+            "city": "Saint-Ouen-L'Aumône",
+            "country": "FR"
+          },
+          "stock": 0
+        }
+      ],
+      "slug": "Store-4-XXL"
+    }
+  }
+}

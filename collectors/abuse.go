@@ -10,23 +10,20 @@ import (
 
 // AbuseCollector is a collector for the abuses-related API
 type AbuseCollector struct {
-	abuseMetric      *prometheus.Desc
-	abuseCountMetric *prometheus.Desc
+	apiClient *online.Client
+
+	abuseMetric *prometheus.Desc
 }
 
 // NewAbuseCollector is a helper function to spawn a new AbuseCollector
-func NewAbuseCollector() *AbuseCollector {
+func NewAbuseCollector(client *online.Client) *AbuseCollector {
 	return &AbuseCollector{
+		apiClient: client,
+
 		abuseMetric: prometheus.NewDesc(
 			"dedibox_pending_abuse",
 			"Pending abuses",
 			[]string{"service", "category"},
-			nil,
-		),
-		abuseCountMetric: prometheus.NewDesc(
-			"dedibox_pending_abuse_count",
-			"Pending abuse count",
-			[]string{},
 			nil,
 		),
 	}
@@ -35,12 +32,11 @@ func NewAbuseCollector() *AbuseCollector {
 // Describe report all the metrics of the AbuseCollector
 func (collector *AbuseCollector) Describe(ch chan<- *prometheus.Desc) {
 	ch <- collector.abuseMetric
-	ch <- collector.abuseCountMetric
 }
 
 // Collect gather all the metrics of the AbuseCollector
 func (collector *AbuseCollector) Collect(ch chan<- prometheus.Metric) {
-	abuses, err := online.GetAbuses()
+	abuses, err := collector.apiClient.GetAbuses()
 	if err != nil {
 		log.WithFields(log.Fields{
 			"collector": "abuse",
@@ -50,8 +46,6 @@ func (collector *AbuseCollector) Collect(ch chan<- prometheus.Metric) {
 		log.Debug(err)
 		return
 	}
-
-	ch <- prometheus.MustNewConstMetric(collector.abuseCountMetric, prometheus.GaugeValue, float64(len(abuses)))
 
 	for _, abs := range abuses {
 		var abuseLabels []string

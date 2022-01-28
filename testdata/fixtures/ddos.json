@@ -1,0 +1,19 @@
+[
+  {
+    "id": 0,
+    "target": "string",
+    "start": "2022-01-27T15:04:05Z",
+    "end": "2022-01-27T15:04:05Z",
+    "mitigation": "arbor",
+    "type": "string",
+    "max_pps": 0,
+    "max_bps": 0,
+    "timeline": [
+      {
+        "timestamp": 0,
+        "pps": 0,
+        "bps": 0
+      }
+    ]
+  }
+]

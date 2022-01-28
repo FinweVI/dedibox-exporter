@@ -1,0 +1,11 @@
+{
+  "login": "sd-1234",
+  "server": "dedibackup-dc3.online.net",
+  "active": true,
+  "acl_enabled": true,
+  "autologin": true,
+  "quota_space": 1000,
+  "quota_space_used": 10,
+  "quota_files": 50,
+  "quota_files_used": 5
+}

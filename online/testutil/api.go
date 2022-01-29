@@ -5,12 +5,26 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
+	"path"
+	"path/filepath"
+	"runtime"
 	"strconv"
 	"strings"
 )
 
+func RootDir() string {
+	_, b, _, _ := runtime.Caller(0)
+	d := path.Join(path.Dir(b))
+	return filepath.Dir(d)
+}
+
 func fixture(path string) string {
-	b, err := ioutil.ReadFile("../testdata/fixtures/" + path)
+	filePath := filepath.Join(
+		RootDir(),
+		"/testdata/fixtures/",
+		path,
+	)
+	b, err := ioutil.ReadFile(filepath.Clean(filePath))
 	if err != nil {
 		panic(err)
 	}

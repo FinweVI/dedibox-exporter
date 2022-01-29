@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"strings"
+
+	log "github.com/sirupsen/logrus"
 )
 
 var validCollectors = []string{"abuse", "ddos", "plan", "dedibackup"}
@@ -44,5 +46,9 @@ func (cs *collectorSlice) Set(cltr string) error {
 }
 
 func (cs *collectorSlice) SetDefaultCollector() {
-	cs.Set(validCollectors[0])
+	err := cs.Set(validCollectors[0])
+	if err != nil {
+		log.Debug(err)
+		log.WithField("collectors", validCollectors[0]).Fatal("unable to set default collector")
+	}
 }

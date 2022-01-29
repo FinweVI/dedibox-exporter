@@ -69,13 +69,20 @@ func main() {
 	}).Info("Starting Dedibox Exporter")
 	http.Handle(metricsPath, promhttp.Handler())
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte(`<html>
-             <head><title>Dedibox Exporter</title></head>
-             <body>
-             <h1>Dedibox Exporter</h1>
-             <p><a href='` + metricsPath + `'>Metrics</a></p>
-             </body>
-             </html>`))
+		_, err := w.Write(
+			[]byte(
+				`<html>
+			     		<head><title>Dedibox Exporter</title></head>
+			     		<body>
+			     			<h1>Dedibox Exporter</h1>
+			     			<p><a href='` + metricsPath + `'>Metrics</a></p>
+			     		</body>
+			     	</html>`,
+			))
+		if err != nil {
+			log.Debug(err)
+			log.WithField("path", "/").Error("unable to show the page")
+		}
 	})
 	log.Fatal(http.ListenAndServe(listenAddress, nil))
 }

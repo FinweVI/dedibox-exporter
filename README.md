@@ -4,7 +4,7 @@ A Prometheus Exporter for the [Dedibox API](https://console.online.net/fr/api/) 
 
 ## Metrics
 
-Note: for metrics like `abuse` or `ddos`, only the first page (latest infos) is fetched from the API to avoid overloading it.  
+Note: for metrics like `abuse` or `ddos`, only the first page (latest infos) is fetched from the API to avoid overloading it.
 The goal of this exporter is to create alerts on new DDoS attacks or unresolved abuses, not provide advanced statistic on your account.
 
 | Name | Description | Labels |
@@ -31,5 +31,5 @@ Require `ONLINE_API_TOKEN` to be set with your Online.net's API token.
 | metric-path | /metrics | Path under which to expose metrics |
 
 ## Issues & Contribution
-All bug report, packaging requests, features requests or PR are accepted.  
+All bug report, packaging requests, features requests or PR are accepted.
 I mainly created this exporter for my personal usage but I'll be happy to hear about your needs.

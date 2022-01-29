@@ -1,0 +1,31 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+---
+ci:
+    autofix_prs: true
+    skip: []
+    submodules: false
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v1.2.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+  - repo: https://github.com/golangci/golangci-lint
+    rev: v1.44.0 # Keep this in-sync with `.tool-versions`
+    hooks:
+    -   id: golangci-lint
+  - repo: https://github.com/tekwizely/pre-commit-golang
+    rev: v1.0.0-beta.5
+    hooks:
+    -   id: go-fmt
+    -   id: go-fmt-repo
+    -   id: go-sec-mod
+    -   id: go-build-mod
+    -   id: go-mod-tidy

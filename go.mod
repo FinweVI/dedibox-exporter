@@ -3,6 +3,7 @@ module github.com/FinweVI/dedibox-exporter
 go 1.17
 
 require (
+	github.com/gofrs/uuid v4.2.0+incompatible
 	github.com/mitchellh/mapstructure v1.4.3
 	github.com/prometheus/client_golang v1.12.0
 	github.com/sirupsen/logrus v1.8.1
@@ -11,7 +12,6 @@ require (
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
-	github.com/gofrs/uuid v4.2.0+incompatible // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/prometheus/client_model v0.2.0 // indirect

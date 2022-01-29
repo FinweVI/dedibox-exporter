@@ -1,6 +1,6 @@
 ---
 name: gotest
-on: ["push", "pull_request"]
+on: push
 
 jobs:
   gotest:

@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+added: proper ci/cd and precommit configuration
 added: unit tests around the whole project
 changed: `collectors` package now use the API client
 changed: `online` package now provide an API client

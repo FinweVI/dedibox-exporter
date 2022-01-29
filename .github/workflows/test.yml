@@ -15,7 +15,7 @@ jobs:
           go-version: 1.17
 
       - name: Test Go Code
-        run: "go test ./..."
+        run: "go test -v ./..."
 
       - name: Run Go Vet
         run: "go vet ./..."
@@ -25,6 +25,12 @@ jobs:
         with:
           version: "2021.1.1"
           install-go: false
+
+      - name: Run coverage
+        run: go test -race -coverprofile=coverage.out -covermode=atomic ./...
+
+      - name: Upload coverage to Codecov
+        run: bash <(curl -s https://codecov.io/bash)
 
   golangci:
     name: lint

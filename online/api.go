@@ -2,7 +2,7 @@ package online
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"strconv"
@@ -98,7 +98,7 @@ func (c Client) query(urlPart string) ([]byte, error) {
 		return output, fmt.Errorf("invalid HTTP status code returned: %s", strconv.Itoa(resp.StatusCode))
 	}
 
-	output, err = ioutil.ReadAll(resp.Body)
+	output, err = io.ReadAll(resp.Body)
 	if err != nil {
 		return output, err
 	}

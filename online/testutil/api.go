@@ -2,9 +2,9 @@ package testutil
 
 import (
 	"fmt"
-	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"path"
 	"path/filepath"
 	"runtime"
@@ -24,7 +24,7 @@ func fixture(path string) string {
 		"/testdata/fixtures/",
 		path,
 	)
-	b, err := ioutil.ReadFile(filepath.Clean(filePath))
+	b, err := os.ReadFile(filepath.Clean(filePath))
 	if err != nil {
 		panic(err)
 	}

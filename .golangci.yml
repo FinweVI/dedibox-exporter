@@ -1,0 +1,13 @@
+version: "2"
+
+linters:
+  exclusions:
+    rules:
+      - path: '^online/api\.go$'
+        linters:
+          - errcheck
+        text: 'Error return value of `resp\.Body\.Close` is not checked'
+      - path: '^online/testutil/api\.go$'
+        linters:
+          - errcheck
+        text: 'Error return value of `fmt\.Fprint` is not checked'

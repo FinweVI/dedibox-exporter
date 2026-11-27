@@ -6,7 +6,7 @@ require (
 	github.com/gofrs/uuid v4.2.0+incompatible
 	github.com/mitchellh/mapstructure v1.4.3
 	github.com/prometheus/client_golang v1.12.0
-	github.com/sirupsen/logrus v1.8.1
+	github.com/sirupsen/logrus v1.8.3
 )
 
 require (
